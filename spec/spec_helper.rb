@@ -1,3 +1,6 @@
+# require 'support/factory_bot'
+# require 'support/shoulda_matchers'
+
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
@@ -8,6 +11,4 @@ RSpec.configure do |config|
   end
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
-  configu.include FactoryBot::Syntax::Methods
-  config.inclue(Shoulda::Matchers::ActiveRecord, type: model)
 end

@@ -10,6 +10,11 @@ class Api::V1::PetDataController < ApplicationController
     end
   end
 
+  def index
+    collection = current_user.pet_data
+    render json: { entires: collection }
+  end
+
   private
 
   def pet_data_params

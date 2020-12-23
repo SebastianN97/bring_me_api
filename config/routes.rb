@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1, defaults: { format: :json } do
-      resources :pet_data, only: [:create]
+      resources :pet_data, only: [:create, :index]
     end
   end
 end

@@ -1,6 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe Pet, type: :model do
+RSpec.describe Pet do
+  let(:user) { create(:user) }
+  let(:pet) { create(:pet) }
   describe 'Database table' do
     it { is_expected.to have_db_column :data }
   end
